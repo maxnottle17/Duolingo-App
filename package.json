@@ -1,0 +1,17 @@
+{
+  "name": "duolingo-xp-tracker",
+  "version": "1.0.0",
+  "description": "Self-hosted XP leaderboard for a group of friends on Duolingo. Installable as a phone app (PWA).",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "dev:mock": "DUO_MOCK=1 DB_PATH=./data/mock.db node --disable-warning=ExperimentalWarning src/server.js",
+    "seed:demo": "DB_PATH=./data/mock.db node --disable-warning=ExperimentalWarning scripts/seed-demo.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/*.test.js\""
+  },
+  "license": "MIT"
+}
